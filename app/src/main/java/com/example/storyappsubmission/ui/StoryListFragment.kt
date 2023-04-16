@@ -3,7 +3,6 @@ package com.example.storyappsubmission.ui
 import android.content.Context
 import android.os.Bundle
 import android.view.*
-import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
@@ -12,20 +11,20 @@ import androidx.core.view.MenuProvider
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.manager.Lifecycle
 import com.example.storyappsubmission.R
 import com.example.storyappsubmission.ViewModel.StoryViewModel
 import com.example.storyappsubmission.ViewModel.StoryViewModelFactory
 import com.example.storyappsubmission.ViewModel.TokenViewModel
 import com.example.storyappsubmission.ViewModel.TokenViewModelFactory
-import com.example.storyappsubmission.data.remote.result.Result
 import com.example.storyappsubmission.data.remote.response.ListStoryItem
+import com.example.storyappsubmission.data.remote.result.Result
 import com.example.storyappsubmission.databinding.FragmentStoryListBinding
 import com.example.storyappsubmission.utils.LoginPreferences
 
@@ -40,7 +39,7 @@ class StoryListFragment : Fragment() {
 
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         (activity as AppCompatActivity).supportActionBar?.show()
         _binding = FragmentStoryListBinding.inflate(inflater, container, false)
         binding.progressBar.visibility = View.GONE

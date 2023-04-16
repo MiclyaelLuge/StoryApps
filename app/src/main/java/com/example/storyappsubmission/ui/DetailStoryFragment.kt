@@ -23,7 +23,7 @@ class DetailStoryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentDetailStoryBinding.inflate(inflater, container, false)
         val factory: StoryViewModelFactory = StoryViewModelFactory.getInstance(requireContext())
         val viewModel: StoryViewModel by viewModels {

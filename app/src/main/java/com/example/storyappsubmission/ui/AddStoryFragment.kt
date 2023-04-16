@@ -41,7 +41,7 @@ class AddStoryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAddStoryBinding.inflate(inflater, container, false)
         binding.progressBar.visibility = View.GONE
         if (!allPermissionsGranted()) {
@@ -155,11 +155,13 @@ class AddStoryFragment : Fragment() {
     }
 
 
+    @Suppress("DEPRECATION")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
         grantResults: IntArray
     ) {
+        @Suppress("DEPRECATION")
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_CODE_PERMISSION) {
             if (!allPermissionsGranted()) {

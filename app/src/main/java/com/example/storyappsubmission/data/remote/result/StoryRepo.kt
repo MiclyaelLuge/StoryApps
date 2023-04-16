@@ -5,7 +5,6 @@ import androidx.lifecycle.MediatorLiveData
 import com.example.storyappsubmission.data.remote.response.*
 import com.example.storyappsubmission.data.remote.retrofit.UserAPIService
 import com.example.storyappsubmission.ui.LoginFragment
-import com.example.storyappsubmission.utils.LoginPreferences
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
